@@ -27,8 +27,8 @@ const SingleVideo = () => {
     
 }
 
-const handleDeleteNote = () => {
-
+const handleDeleteNote = (noteId) => {
+    dispatch({type: "DELETE_NOTE", payload: {videoId: Number(videoId), noteId}});
 }
 
   return (

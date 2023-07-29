@@ -16,7 +16,11 @@ const DataReducer = (state, action) => {
 
         case "EDIT_NOTE":
             const {addTo: add, note: editedNote} = action.payload;
-            return {...state, allVideos: state.allVideos.map(detail => detail._id === add ? {...detail, notes: detail.notes.map(note => note.id === editedNote.id ? editedNote : note)} : detail) }
+            return {...state, allVideos: state.allVideos.map(detail => detail._id === add ? {...detail, notes: detail.notes.map(note => note.id === editedNote.id ? editedNote : note)} : detail) };
+
+        case "DELETE_NOTE": 
+          const {videoId, noteId} = action.payload;
+          return {...state, allVideos: state.allVideos.map(detail => detail._id === videoId ? {...detail, notes: detail.notes.filter(note => note.id !== noteId)} : detail ) };
 
         default:
             return state
