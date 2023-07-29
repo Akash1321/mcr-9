@@ -9,8 +9,31 @@
     align-items: stretch;
 }
 
+.header{
+    color: var(--clr-primary);
+    font-weight: var(--fw-bold);
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.videos-list{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+
 
 .content-container{
+    margin-left: 0;
+    width: 100%;
+    padding-inline: 1rem;
+    padding-bottom: 5rem;
+}
+
+.content-container-single{
     margin-left: 0;
     width: 100%;
     padding-inline: 1rem;
@@ -30,7 +53,13 @@
 
 @media(min-width: 50em){
     .content-container{
-        margin-inline: auto;
+        margin-left: 26vw;
+        max-width: calc(100% - 40vw);
+        padding-bottom: 1rem;
+    }
+
+    .content-container-single{
+        margin-left: 26vw;
         max-width: calc(100% - 55vw);
         padding-bottom: 1rem;
     }

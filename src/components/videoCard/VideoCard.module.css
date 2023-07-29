@@ -1,0 +1,51 @@
+.container{
+    width: 15rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.icon{
+    align-self: flex-end;
+    position: absolute;
+    background-color: var(--clr-background);
+    padding: 0.3rem 0.5rem;
+    border-bottom-left-radius: 1rem;
+}
+
+
+.fill{
+    color: var(--clr-background);
+}
+
+.empty{
+    color: var(--clr-primary);
+}
+
+.empty:hover{
+    color: var(--clr-accent);
+}
+
+.detailsContainer{
+    display: flex;
+    gap: 1rem;
+}
+
+.creatorImage{
+    align-self: flex-start;
+    border-radius: 50%;
+}
+
+.details > h2{
+    font-weight: var(--fw-bold);
+    width: 10rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+

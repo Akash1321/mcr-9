@@ -1,0 +1,41 @@
+.noteContainer{
+    position: absolute;
+    right: 1rem;
+    top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 18rem;
+    border: 1px solid var(--clr-primary);
+    background-color: var(--clr-background);
+}
+
+
+.cancel{
+    align-self: flex-end;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;  
+
+}
+
+.form > input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.form > button{
+    padding: 0.5rem;
+    background-color: var(--clr-accent);
+    color: var(--clr-background);
+    font-weight: var(--fw-bold);
+    border-radius: 1rem;
+}
+
+

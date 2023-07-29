@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import SidebarStyles from "./Sidebar.module.css";
 
 
-const Sidebar = ({setShowCreatePost}) => {
+const Sidebar = () => {
   const styleActive = ({ isActive }) =>
     isActive  ? `${SidebarStyles.active}` : "";
 

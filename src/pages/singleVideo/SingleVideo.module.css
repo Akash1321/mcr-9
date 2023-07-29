@@ -1,0 +1,58 @@
+.content{
+    margin-top: 1.5rem;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.detail{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.userImage{
+    border-radius: 50%;
+}
+
+.detail > h1{
+    font-weight: var(--fw-bold);
+    font-size: 1.2rem;
+}
+
+.interaction{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.notesContainer{
+    margin-top: 1rem;
+}
+
+.notesContainer > h2{
+    font-weight: var(--fw-bold);
+}
+
+.notesContainer > ul{
+    list-style: none;
+    padding: 0.5rem;
+}
+
+.notesContainer > ul > li{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.notesInteract{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+

@@ -1,0 +1,10 @@
+.searchContainer{
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    width: 50%;
+}
+
+.searchContainer > input {
+    width: 100%;
+    padding: 1rem;
+}
