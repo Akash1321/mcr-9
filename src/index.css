@@ -1,13 +1,139 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+:root{
+
+  --clr-white: #F1F1F1;
+  --clr-dark: #000000;
+
+  /* --clr-primary: var(--clr-white);
+  --clr-background: #0e0d0d; */
+
+  --clr-primary: #262626;
+  --clr-background: #ffffff;
+
+  --clr-accent: #ff0000;
+  --clr-neutral: #999999;
+
+  --ff-primary: 'Lato', sans-serif;
+
+  --fw-black: 900;
+  --fw-bold: 700;
+  --fw-regular: 400;
+  --fw-light: 300;
+
+  --fs-400: 1rem;
+  --fs-500: 1.5rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root{
+  isolation: isolate;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(153, 153, 153, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-accent);
+  border-radius: 1rem;
+  border: 0.2rem solid transparent;
+  background-clip: content-box;
+  
+
+  /* outline: 1px solid slategrey; */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+body{
+  background-color: var(--clr-background);
+  color: var(--clr-primary);
+  font-size: 16px;
+  font-family: var(--ff-primary);
+}
+
+button{
+  border: none;
+  cursor: pointer;
 }
