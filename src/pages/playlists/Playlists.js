@@ -1,7 +1,7 @@
 const Playlists = () => {
     return (
         <div className="content-container">
-            <h1>Playlists</h1>
+            <h1 className="header">Playlists</h1>
         </div>
     )
 }

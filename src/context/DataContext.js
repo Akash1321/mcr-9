@@ -9,7 +9,7 @@ const videosTransformed = videos.map(detail => ({...detail, notes: []}));
 
 const initialData = {
     categories: categories,
-    allVideos: videosTransformed,
+    allVideos: JSON.parse(localStorage.getItem("videoList")) || videosTransformed,
     watchLater: JSON.parse(localStorage.getItem("watch-later")) || [],
     searchInput: "",
 }
@@ -18,6 +18,7 @@ export const DataProvider = ({children}) => {
     const [state, dispatch] = useReducer(DataReducer, initialData);
 
     localStorage.setItem("watch-later", JSON.stringify(state.watchLater));
+    localStorage.setItem("videoList", JSON.stringify(state.allVideos));
 
 
     const searchedVideos = state.searchInput ? state.allVideos.filter(({title}) => title.toLowerCase().includes(state.searchInput)) : state.allVideos;
