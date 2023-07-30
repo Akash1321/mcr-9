@@ -4,3 +4,4 @@ export {Playlists} from "./playlists/Playlists";
 export {WatchLater} from "./watchLater/WatchLater";
 export {VideoList} from "./videoList/VideoList";
 export {SingleVideo} from "./singleVideo/SingleVideo";
+export {SinglePlaylist} from "./singlePlaylist/SinglePlaylist";

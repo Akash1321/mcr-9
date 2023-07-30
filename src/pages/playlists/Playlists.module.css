@@ -1,0 +1,45 @@
+
+
+.lists{
+    width: 16rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cancel{
+    align-self: flex-end;
+}
+
+.lists > h2{
+    font-weight: var(--fw-bold);
+    margin-top: 0.5rem;
+    white-space: nowrap;
+    width: 14rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list > p{
+    white-space: nowrap;
+    width: 14rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.add{
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addIcon{
+    width: 2rem;
+    height: 2rem;
+    color:  var(--clr-accent);
+}
+

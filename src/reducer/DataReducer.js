@@ -22,6 +22,21 @@ const DataReducer = (state, action) => {
           const {videoId, noteId} = action.payload;
           return {...state, allVideos: state.allVideos.map(detail => detail._id === videoId ? {...detail, notes: detail.notes.filter(note => note.id !== noteId)} : detail ) };
 
+
+        case "ADD_NEW_PLAYLIST":
+            return {...state, playlists: [...state.playlists, action.payload]};
+
+        case "DELETE_PLAYLIST":
+            return {...state, playlists: state.playlists.filter(({id}) => id !== action.payload)};
+
+        case "ADD_VIDEO_TO_PLAYLIST":
+            const {id: listId, video} = action.payload;
+            return {...state, playlists: state.playlists.map(playlist => playlist.id === listId ? {...playlist, videos: [...playlist.videos, video]} : playlist)};
+
+        case "REMOVE_VIDEO_FROM_LIST":
+            const {id, vidId} = action.payload;
+            return {...state, playlists: state.playlists.map(playlist => playlist.id === id ? {...playlist, videos: playlist.videos.filter(({_id}) => _id !== vidId)} : playlist)};
+
         default:
             return state
     }

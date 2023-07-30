@@ -1,4 +1,4 @@
-import { Explore, Home, Playlists, SingleVideo, VideoList, WatchLater } from "pages";
+import { Explore, Home, Playlists, SinglePlaylist, SingleVideo, VideoList, WatchLater } from "pages";
 import {Routes, Route} from "react-router-dom";
 
 const AllRoutes = () => {
@@ -10,6 +10,7 @@ const AllRoutes = () => {
             <Route path="/watchLater" element={<WatchLater/>} />
             <Route path="/videos/:categorySelected" element={<VideoList/>} />
             <Route path="/video/:videoId" element={<SingleVideo/>} />
+            <Route path="/playlists/:playlistId" element={<SinglePlaylist/>} />
         </Routes>
     )
 };

@@ -3,12 +3,13 @@ import { Clock, Edit, List, Edit2, Trash2 } from "react-feather";
 import { useParams } from "react-router-dom";
 import SingleVideoStyles from "./SingleVideo.module.css";
 import { useState } from "react";
-import { Note } from "components";
+import { AddPlayLists, Note } from "components";
 
 const SingleVideo = () => {
     
   const [showNAddNote, setShowAddNote] = useState(false);
   const [showEditNote, setShowEditNote] = useState(false);
+  const [showPlaylist, setShowPlaylist] = useState(false);
   const { videoId } = useParams();
   const {
     state: { allVideos, watchLater }, dispatch
@@ -54,7 +55,7 @@ const handleDeleteNote = (noteId) => {
 
         <div className={SingleVideoStyles.interaction}>
             <Clock fill={isWatchLater ? "black" : "white"} color={isWatchLater ? "white" : "black"} className={SingleVideoStyles.icons} onClick={handleWatchLater}/>
-            <List className={SingleVideoStyles.icons} />
+            <List className={SingleVideoStyles.icons} onClick={() => setShowPlaylist(true)}/>
             <Edit className={SingleVideoStyles.icons} onClick={() => setShowAddNote(true)}/>
             
             {showNAddNote && <Note setShowAddNote={setShowAddNote} id={showVideo?._id}/>}
@@ -78,7 +79,7 @@ const handleDeleteNote = (noteId) => {
                 ))}
             </ul>
         </div>
-      
+      {showPlaylist && <AddPlayLists onCancel={setShowPlaylist} video={showVideo} addVideos/>}
     </div>
   );
 };
